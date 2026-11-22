@@ -100,8 +100,8 @@ center_text(d, card_w / 2, 628, "ITEMIZED FINES", font(F_BOLD, 36), BLACK)
 
 rows = [
     ("ORIGINAL FINE \u2014 5 COUNTS", "$13,587"),
-    ("LATE FEE \u2014 $100/DAY \u00d7 4,748 DAYS", "$474,800"),
-    ("INTEREST \u2014 12% \u00d7 13 YEARS", "$21,196"),
+    ("LATE FEE \u2014 $100/DAY \u00d7 4,748 DAYS (YES, WE COUNTED)", "$474,800"),
+    ("INTEREST \u2014 12% \u00d7 13 YEARS (BECAUSE WE CAN)", "$21,196"),
     ("TOWING \u2014 CAR STILL THERE", "$350"),
     ("PAPERWORK & STAMPS", "$12"),
     ("COLLECTION FEE \u2014 WE GOT TIRED OF ASKING", "$500"),
@@ -125,19 +125,24 @@ amt = "$510,445"
 aw = d.textlength(amt, font=f_amt)
 d.text((card_w - 90 - aw, 1006), amt, font=f_amt, fill=RED)
 
-# punchline
-center_text(d, card_w / 2, 1118, "PAYMENT PLAN AVAILABLE:  47 HEISTS",
-            font(F_BOLD, 34), BLACK)
-center_text(d, card_w / 2, 1162, "FAILURE TO PAY WILL RESULT IN A SEQUEL.",
-            font(F_REG, 26), GRAY)
+# punchline — the payoff: bigger, "47 HEISTS" in red, sequel line bold black
+f_pay = font(F_BOLD, 40)
+pre = "PAYMENT PLAN AVAILABLE:  "
+pay = "47 HEISTS"
+tw = d.textlength(pre + pay, font=f_pay)
+sx = card_w / 2 - tw / 2
+d.text((sx, 1112), pre, font=f_pay, fill=BLACK)
+d.text((sx + d.textlength(pre, font=f_pay), 1112), pay, font=f_pay, fill=RED)
+center_text(d, card_w / 2, 1164, "FAILURE TO PAY WILL RESULT IN A SEQUEL.",
+            font(F_BOLD, 30), BLACK)
 
-# ---------- 5. OVERDUE stamp (rotated, over the photo, clear of caption) ----------
-stamp = Image.new("RGBA", (340, 95), (0, 0, 0, 0))
+# ---------- 5. OVERDUE stamp (small, fully inside the photo, faces clear) ----------
+stamp = Image.new("RGBA", (250, 64), (0, 0, 0, 0))
 sd = ImageDraw.Draw(stamp)
-sd.text((12, 12), "OVERDUE", font=font(F_BLACK, 52), fill=RED + (255,))
-sd.rectangle([4, 8, 335, 86], outline=RED + (255,), width=5)
+sd.text((8, 8), "OVERDUE", font=font(F_BLACK, 36), fill=RED + (255,))
+sd.rectangle([3, 5, 246, 58], outline=RED + (255,), width=4)
 stamp = stamp.rotate(-12, expand=True, resample=Image.BICUBIC)
-card.alpha_composite(stamp, (px + 30, py + 30))
+card.alpha_composite(stamp, (px + 150, py + 95))
 
 # ---------- 6. banner, pixel-for-pixel from v3 ----------
 v3 = Image.open(f"{V3}/meme.png").convert("RGB")
