@@ -84,3 +84,24 @@ makefun,ai-agents,bounties,growth). Commit f1a3ef6.
   after the user approves the meme + caption.
 - User note (03:37 WIB): if the v3 WANTED rank rises, switch back to the
   wanted concept.
+
+## Revision (user: "Ubah dlu yang bagus", 03:51 WIB — commit 087aaba)
+
+Kept the concept, amounts and caption exactly (total still $510,445, so the
+248-char caption stays valid). What changed and why:
+
+1. **Itemized jokes sharpened** (labels only, amounts untouched):
+   - LATE FEE — "...× 4,748 DAYS (YES, WE COUNTED)" — the count itself
+     becomes the joke (bureaucracy that actually kept count for 13 years).
+   - INTEREST — "12% × 13 YEARS (BECAUSE WE CAN)" — the dry formula line
+     was the weakest row; now it reads as arrogant-bureaucrat humor.
+2. **Punchline promoted from footnote to payoff**: "PAYMENT PLAN
+   AVAILABLE:" now 40px bold with "47 HEISTS" in red; "FAILURE TO PAY WILL
+   RESULT IN A SEQUEL." now 30px bold black (was 26px regular gray). At
+   phone size both lines now read before the banner.
+3. **OVERDUE stamp fixed**: smaller (36px) and placed fully inside the
+   suspects photo — first pass clipped the "SUSPECTS — STILL AT LARGE"
+   caption and covered faces; now faces are clear and the caption is
+   untouched. Verified in the 720px lite (phone-size legibility check).
+4. Banner re-verified pixel-identical to v3 after rebuild; math re-checked
+   (13,587 + 474,800 + 21,196 + 350 + 12 + 500 = 510,445).
