@@ -85,7 +85,37 @@ makefun,ai-agents,bounties,growth). Commit f1a3ef6.
 - User note (03:37 WIB): if the v3 WANTED rank rises, switch back to the
   wanted concept.
 
-## Revision (user: "Ubah dlu yang bagus", 03:51 WIB — commit 087aaba)
+## Revision 2 (user: "gambaran tilangnya seperti mobile", 03:53 WIB — commit TBD)
+
+The ticket is now depicted AS ON A MOBILE PHONE — the whole meme is a phone
+screenshot. Arahan ini datang setelah revisi-1 selesai, jadi diterapkan
+sebagai revisi ke-2 (build_v4.py ditulis ulang):
+
+1. **Phone frame**: dark bezel with rounded corners + side buttons, cream
+   screen, status bar (9:41, Dynamic Island, signal/wifi/battery icons).
+2. **Push notification card** (iOS-style, white, soft shadow) — the new
+   hook, readable at thumbnail size: VICE CITY PD icon + "now" / "FINAL
+   NOTICE" / "Your $13,587 ticket is now $510,445." / "Payment plan:
+   47 heists."
+3. **Citation as the app screen** below the notification: same info block
+   (TO / CASE NO. / DATE — RE line dropped, redundant with the
+   notification), same suspects photo + OVERDUE stamp (smaller, 28px),
+   same itemized fines, TOTAL DUE, payment plan, sequel punchline.
+4. **New joke beat**: iMessage-style input bar at the bottom of the
+   screen — "Tap to pay — 47 heists accepted" with a red send arrow —
+   plus a home indicator pill.
+5. Big "FINAL NOTICE" title dropped — the notification IS the title now
+   (avoids redundancy, frees space for the phone UI).
+
+Kept exactly: all amounts (math re-checked: 13,587 + 474,800 + 21,196 +
+350 + 12 + 500 = 510,445), itemized joke labels from rev-1, banner
+**pixel-identical to v3** (full-crop diff after rebuild — first attempt
+failed because a re-applied rounded mask clipped the banner's bottom
+corners; fixed by not re-applying the mask after the banner paste).
+Caption UNCHANGED (248 chars, <280). Verified in the 720px lite: notification,
+rows, total, punchlines all legible at phone size.
+
+## Revision 1 (user: "Ubah dlu yang bagus", 03:51 WIB — commit 087aaba)
 
 Kept the concept, amounts and caption exactly (total still $510,445, so the
 248-char caption stays valid). What changed and why:
