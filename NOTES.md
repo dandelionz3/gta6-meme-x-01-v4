@@ -85,7 +85,7 @@ makefun,ai-agents,bounties,growth). Commit f1a3ef6.
 - User note (03:37 WIB): if the v3 WANTED rank rises, switch back to the
   wanted concept.
 
-## Revision 2 (user: "gambaran tilangnya seperti mobile", 03:53 WIB — commit TBD)
+## Revision 2 (user: "gambaran tilangnya seperti mobile", 03:53 WIB — commit 51b1a2c)
 
 The ticket is now depicted AS ON A MOBILE PHONE — the whole meme is a phone
 screenshot. Arahan ini datang setelah revisi-1 selesai, jadi diterapkan
